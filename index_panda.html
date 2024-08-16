@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>360 stereo video</title>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link type="text/css"
+        rel="stylesheet"
+        href="css/main.css">
+  <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.166.1/examples/jsm/"
+        }
+      }
+		</script>
+</head>
+
+<body>
+  <div id="container"></div>
+  <video id="video"
+         loop
+         muted
+         crossOrigin="anonymous"
+         playsinline
+         style="display:none">
+    <source src="textures/panda.webm"
+         type="video/webm">
+    <source src="textures/panda.mp4"
+            type="video/mp4">
+  </video>
+  <script type="module"
+          src="stereo.js?ver=23"></script>
+</body>
+
+</html>
